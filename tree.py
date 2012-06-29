@@ -17,8 +17,8 @@ class Tree:
    def Search(self, param):
       node=""
       if isinstance( param, int):
-         node = Node(int)
+         node = Node(param)
       if isinstance( param, Node):
-         node = node
+         node = param
       
       return self.trunk.Search(node)
