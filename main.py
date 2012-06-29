@@ -9,3 +9,8 @@ for i in reversed ( range(100)):
 
 print t.Search(25)
 print t.Search(250)
+
+for i in range(100):
+   t.Delete(i)
+   
+

@@ -40,9 +40,11 @@ class Node:
             return self.lower.Search(node)
    
    def Delete(self, node):
-      if ( node.value == self.lower.value and self.lower.higher == "" and self.lower.lower == "") :
+      if ( self.lower!="" and node.value == self.lower.value  and self.lower.higher == "" and self.lower.lower == "") :
+         print "Deleting!"
          self.lower=""
-      if ( node.value == self.higher.value and self.higher.higher == "" and self.higher.lower == "") :
+      if ( self.higher!="" and node.value == self.higher.value and self.higher.higher == "" and self.higher.lower == "") :
+         print "Deleting!"
          self.higher=""
          
          
