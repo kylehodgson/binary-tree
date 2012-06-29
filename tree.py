@@ -17,8 +17,16 @@ class Tree:
    def Search(self, param):
       if ( self.trunk==""):
          return None       
+      node = self.Param2Node(param)
+      return self.trunk.Search(node)
+   
+   def Delete(self, param):
+      node = self.Param2Node(param)
+      return self.trunk.Delete(node)
+   
+   def Param2Node(self,param):
       if isinstance( param, int):
          node = Node(param)
       if isinstance( param, Node):
          node = param
-      return self.trunk.Search(node)
+      return node

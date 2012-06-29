@@ -38,4 +38,11 @@ class Node:
       if ( self.value > node.value ) :
          if ( isinstance( self.lower, Node)):
             return self.lower.Search(node)
+   
+   def Delete(self, node):
+      if ( node.value == self.lower.value and self.lower.higher == "" and self.lower.lower == "") :
+         self.lower=""
+      if ( node.value == self.higher.value and self.higher.higher == "" and self.higher.lower == "") :
+         self.higher=""
+         
          
