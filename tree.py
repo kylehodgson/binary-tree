@@ -15,13 +15,10 @@ class Tree:
       self.trunk.PrintNodes()
    
    def Search(self, param):
-      node=""
+      if ( self.trunk==""):
+         return None       
       if isinstance( param, int):
          node = Node(param)
       if isinstance( param, Node):
          node = param
-      
-      if ( self.trunk==""):
-         return None
-         
       return self.trunk.Search(node)

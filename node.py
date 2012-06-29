@@ -30,7 +30,6 @@ class Node:
          self.higher.PrintNodes()
    
    def Search(self, node):
-     
       if ( node.value == self.value) :
          return "Found {0}".format(node.value)
       if ( self.value < node.value ):
