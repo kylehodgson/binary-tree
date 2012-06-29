@@ -32,15 +32,17 @@ class Node:
    def Search(self, param):
       node=""
       if isinstance( param, int):
-         node = Node(int)
+         node = Node(param)
       if isinstance( param, Node):
-         node = node
+         node = param
       
       if ( node.value == self.value) :
          return true
       
       if ( self.value > node.value ):
-         return self.higher.Search(node)
-      if ( self.value < ndoe.value ) :
-         return self.lower.Search(node)
+         if ( isinstance( self.higher, Node)):
+            return self.higher.Search(node)
+      if ( self.value < node.value ) :
+         if ( isinstance( self.lower, Node)):
+            return self.lower.Search(node)
          
