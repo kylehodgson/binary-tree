@@ -29,16 +29,10 @@ class Node:
       if ( self.higher != "" ) :
          self.higher.PrintNodes()
    
-   def Search(self, param):
-      node=""
-      if isinstance( param, int):
-         node = Node(param)
-      if isinstance( param, Node):
-         node = param
-      
+   def Search(self, node):
+     
       if ( node.value == self.value) :
          return "Found {0}".format(node.value)
-      
       if ( self.value < node.value ):
          if ( isinstance( self.higher, Node)):
             return self.higher.Search(node)
