@@ -1,4 +1,5 @@
 
+from node import *
 
 class Tree:
    trunk=""
@@ -8,7 +9,16 @@ class Tree:
       else :
          self.trunk.AddNode(node)
 
-   def WalkNodes(self):
+   def PrintNodes(self):
       if ( self.trunk == "" ) :
          return
-      self.trunk.WalkNodes()
+      self.trunk.PrintNodes()
+   
+   def Search(self, param):
+      node=""
+      if isinstance( param, int):
+         node = Node(int)
+      if isinstance( param, Node):
+         node = node
+      
+      return self.trunk.Search(node)

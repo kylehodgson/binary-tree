@@ -8,4 +8,5 @@ for i in range(100):
    t.AddNode(n)
 
 
-t.WalkNodes()
+print t.Search(25)
+print t.Search(250)
