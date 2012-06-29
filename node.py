@@ -37,12 +37,12 @@ class Node:
          node = param
       
       if ( node.value == self.value) :
-         return true
+         return "Found {0}".format(node.value)
       
-      if ( self.value > node.value ):
+      if ( self.value < node.value ):
          if ( isinstance( self.higher, Node)):
             return self.higher.Search(node)
-      if ( self.value < node.value ) :
+      if ( self.value > node.value ) :
          if ( isinstance( self.lower, Node)):
             return self.lower.Search(node)
          
