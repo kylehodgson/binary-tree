@@ -21,4 +21,7 @@ class Tree:
       if isinstance( param, Node):
          node = param
       
+      if ( self.trunk==""):
+         return None
+         
       return self.trunk.Search(node)
